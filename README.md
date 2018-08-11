@@ -24,7 +24,7 @@ package main
 import "github.com/mamal72/go-batch"
 
 func main() {
-    clinet := batch.NewClient("YOUR_BATCH_REST_API_KEY", "YOUR_BATCH_API_KEY_FOR_YOUR_APP")
+    client := batch.NewClient("YOUR_BATCH_REST_API_KEY", "YOUR_BATCH_API_KEY_FOR_YOUR_APP")
     payload := batch.TransactionalPushPayload{
         GroupID: "SOME_GROUP_ID",
         Recipients: batch.TransactionalPushRecipient{
