@@ -60,21 +60,3 @@ func (b *APIClient) TransactionalSend(payload TransactionalPushPayload) (Transac
 	err = json.Unmarshal(bodyBytes, &pushResponse)
 	return pushResponse, err
 }
-
-func yes() {
-	c := NewClient("a", "b")
-
-	x := TransactionalPushPayload{
-		GroupID: "YOUR_GROUP_ID",
-		Recipients: TransactionalPushRecipient{
-			CustomIDs: []string{"1", "2"},
-			// blah blah blah
-		},
-		Message: TransactionalPushMessage{
-			Title: "Greeting",
-			Body:  "Hello dear user!",
-		},
-		// blah blah blah xD
-	}
-	c.TransactionalSend(x)
-}
