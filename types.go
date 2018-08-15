@@ -9,7 +9,7 @@ type APIClient struct {
 // TransactionalPushResponse is the response type of transactional push notifications
 // See https://batch.com/doc/api/transactional.html#_responses
 type TransactionalPushResponse struct {
-	Token string `json:"string"`
+	Token string `json:"token"`
 }
 
 // TransactionalPushRecipient is a sturct containing
